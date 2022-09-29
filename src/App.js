@@ -1,21 +1,25 @@
 // import './App.css';
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import About from "./components/About";
-import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Batteries from "./pages/Batteries";
+import General from "./pages/General";
+import Propulsion from "./pages/Propulsion";
 
 function App() {
   return (
-    // <div className="App">
-    //   Hello!
-    // </div>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Navbar></Navbar>
+        <Routes>
+          <Route path="/" element={<General />} />
+          <Route path="/batteries" element={<Batteries />} />
+          <Route path="/propulsion" element={<Propulsion />} />
+          {/* si une mauvaise route est rentré dans la barre d'url je renvoi à la racine */}
+          <Route path="*" element={<General />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

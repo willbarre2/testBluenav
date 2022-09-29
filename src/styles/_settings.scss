@@ -3,14 +3,45 @@ $Jose: "Josefin sans", sans-serif;
 
 $black: rgb(34, 31, 31);
 $white: rgb(250, 250, 250);
+$blue: rgb(24, 74, 255);
+$red: red;
+
+$xxl: "only screen and (max-width: 1400px)";
+$xl: "only screen and (max-width: 1200px)";
+$lg: "only screen and (max-width: 992px)";
+$md: "only screen and (max-width: 768px)";
+$sm: "only screen and (max-width: 576px)";
+$xs: "only screen and (max-width: 425px)";
+$xxs: "only screen and (max-width: 320px)";
+
+%borderW{
+    border: 2px solid $white;
+} 
+
+%padding{
+    padding: 2rem 1rem;
+}
+    
 
 *{
     margin: 0;
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 body{
-    background-color: $white;
+    background-color: $black;
     font-family: $Jose;
-    color: $black;
+    color: $white;
+}
+
+.content{
+    font-size: 3rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 3rem;
 }
